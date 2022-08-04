@@ -7,7 +7,9 @@ import math
 
 
 def start(value):
-    if ((type(value) is int or type(value) is float) and value >= 0):
+    if ((type(value) is int or type(value) is float)):
+        if (value < 0):
+            value *= -1
         total = count_recursive(value, 0)
         print(total)
     else:
@@ -16,11 +18,11 @@ def start(value):
 def count_recursive(num, count):
     if (num == 0 and count == 0):
         return 1
-    elif (num/10 == 0):
+    elif (num//10 == 0 and num < 1):
         return count 
     else:
         count += 1
-        return count_recursive(math.trunc(num/10), count)
+        return count_recursive(num//10, count)
     
 if __name__ == '__main__':
-    start(0)
+    start(-1000)
