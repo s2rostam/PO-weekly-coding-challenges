@@ -44,6 +44,6 @@ public class PerfectNumber {
     public static void main(String[] args) {
         PerfectNumber pN = new PerfectNumber();
         boolean result = pN.isPerfectNumber(8128); //Expected result: true
-        System.out.println("Perfect number?: " + result);
+        System.out.println("Perfect number?: " + result); //Output: Perfect number?: true
     }
 }
